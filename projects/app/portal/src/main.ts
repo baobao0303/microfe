@@ -1,6 +1,7 @@
+import 'zone.js';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/app.module';
+import { PortalModule } from './app/portal.module';
 
 platformBrowserDynamic()
-  .bootstrapModule(AppModule)
+  .bootstrapModule(PortalModule)
   .catch((err) => console.error(err));

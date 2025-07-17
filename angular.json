@@ -96,7 +96,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "projects/portal/src/main.ts",
-            "polyfills": ["zone.js"],
+  "polyfills": "src/polyfills.ts",
             "tsConfig": "projects/portal/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -178,7 +178,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "projects/app/ecommerce/src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": "src/polyfills.ts",
             "tsConfig": "projects/app/ecommerce/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -287,7 +287,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "projects/container/src/main.ts",
-            "polyfills": ["zone.js"],
+        "polyfills": "src/polyfills.ts",
             "tsConfig": "projects/container/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [

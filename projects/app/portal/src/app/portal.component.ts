@@ -3,8 +3,8 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'portal-page',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  templateUrl: './portal.component.html',
+  styleUrl: './portal.component.scss',
   standalone: false,
 })
 export class PortalPage {}
