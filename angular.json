@@ -88,24 +88,26 @@
           "style": "scss"
         }
       },
-      "root": "projects/portal",
-      "sourceRoot": "projects/portal/src",
+      "root": "projects/app/portal",
+      "sourceRoot": "projects/app/portal/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "browser": "projects/portal/src/main.ts",
-  "polyfills": "src/polyfills.ts",
+            "browser": "projects/app/portal/src/main.ts",
+            "polyfills": "src/polyfills.ts",
             "tsConfig": "projects/portal/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/portal/public"
+                "input": "projects/app/portal/public"
               }
             ],
-            "styles": ["projects/portal/src/styles.scss"]
+            "styles": ["projects/app/portal/src/styles.scss"],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -121,7 +123,9 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "serviceWorker": "projects/app/portal/ngsw-config.json",
+              "ngswConfigPath": "ngsw-config.json"
             },
             "development": {
               "optimization": false,
@@ -150,15 +154,15 @@
           "builder": "@angular/build:karma",
           "options": {
             "polyfills": ["zone.js", "zone.js/testing"],
-            "tsConfig": "projects/portal/tsconfig.spec.json",
+            "tsConfig": "projects/app/portal/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/portal/public"
+                "input": "projects/app/portal/public"
               }
             ],
-            "styles": ["projects/portal/src/styles.scss"]
+            "styles": ["projects/app/portal/src/styles.scss"]
           }
         }
       }
@@ -187,7 +191,9 @@
                 "input": "projects/app/ecommerce/public"
               }
             ],
-            "styles": ["projects/app/ecommerce/src/styles.scss"]
+            "styles": ["projects/app/ecommerce/src/styles.scss"],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -203,6 +209,8 @@
                   "maximumError": "8kB"
                 }
               ],
+              "serviceWorker": "projects/app/ecommerce/ngsw-config.json",
+              "ngswConfigPath": "ngsw-config.json",
               "outputHashing": "all"
             },
             "development": {
@@ -287,7 +295,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "projects/container/src/main.ts",
-        "polyfills": "src/polyfills.ts",
+            "polyfills": "src/polyfills.ts",
             "tsConfig": "projects/container/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -296,6 +304,8 @@
                 "input": "projects/container/public"
               }
             ],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json",
             "styles": ["projects/container/src/styles.scss"]
           },
           "configurations": {
@@ -312,6 +322,8 @@
                   "maximumError": "8kB"
                 }
               ],
+              "serviceWorker": true,
+              "ngswConfigPath": "ngsw-config.json",
               "outputHashing": "all"
             },
             "development": {
